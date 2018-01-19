@@ -1,7 +1,17 @@
+var qrcode = new QRCode(document.getElementById("qrcode"), "");
+$("#short").on("input", function() {
+    renderQRCode($("#short").val());
+})
+
 chrome.tabs.getSelected(null, function(tab) {
-    new QRCode(document.getElementById('qrcode'), tab.url);
     fetchShort(tab.url);
+    renderQRCode(tab.url);
 });
+
+function renderQRCode(url) {
+    qrcode.clear();
+    qrcode.makeCode(url);
+}
 
 function fetchShort(url) {
     if (url.startsWith("http://") || url.startsWith("https://")) {
@@ -10,9 +20,9 @@ function fetchShort(url) {
             format: "simple",
             url: url
         }, function(data) {
-            $("#short").attr("value", data);
+            $("#short").val(data);
         })
     } else {
-        $("#short").attr("value", "您输入的域名暂不支持生成短网址，请重新输入");
+        $("#short").val("您输入的域名暂不支持生成短网址，请重新输入");
     }
 }
