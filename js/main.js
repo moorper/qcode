@@ -1,4 +1,7 @@
-var qrcode = new QRCode(document.getElementById("qrcode"), "");
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+    width: 300,
+    height: 300,
+});
 $("#short").on("input", function() {
     renderQRCode($("#short").val());
 })

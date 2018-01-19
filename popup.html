@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>QCODE</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <div id="qrcode"></div>
-    <label for="short">短网址：</label>
-    <input type="text" id="short" name="short" value="" size="41" placeholder="生成中，速度有点慢，稍微等一下就好了。。。">
+    <div style="margin:15px 0px;">
+        <label for="short">短网址：</label>
+        <input type="text" id="short" name="short" value="" size="38" height="14px" placeholder="生成中，速度有点慢，稍微等一下就好了。。。" title="可修改内容，动态生成二维码">
+    </div>
 </body>
 <script src="js/jquery.js"></script>
 <script src="js/qrcode.js"></script>
