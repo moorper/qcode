@@ -8,5 +8,5 @@
 ![QCODE 截图](https://lh3.googleusercontent.com/LU31rLTwYKKPWmWKarXJoi_u1WAmFdCX7ZOg9J21_f2LVXSb7f6_1DtsZNJCD9yztOGy0gfAJfs=w640-h400-e365)
 
 ## 感谢
-* 二维码生成服务由 qrcodejs 提供 [https://github.com/davidshimjs/qrcodejs/](https://github.com/davidshimjs/qrcodejs/)
-* 短网址生成服务由 百度提供 [http://dwz.cn/](http://dwz.cn/)
+* 二维码生成服务由 [https://github.com/davidshimjs/qrcodejs/](https://github.com/davidshimjs/qrcodejs/) 提供服务
+* 短网址生成服务由 [https://u.nu/](https://u.nu/) 提供服务
