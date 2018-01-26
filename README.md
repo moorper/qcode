@@ -5,7 +5,7 @@
 [Chrome 网上商店](https://chrome.google.com/webstore/detail/qcode/aefjmcpolambjjegdnmpcblmldcoebdm/related?utm_source=InfinityNewtab)
 
 ## 截图
-![QCODE 截图](https://lh3.googleusercontent.com/LU31rLTwYKKPWmWKarXJoi_u1WAmFdCX7ZOg9J21_f2LVXSb7f6_1DtsZNJCD9yztOGy0gfAJfs=w640-h400-e365)
+![QCODE 截图](https://lh3.googleusercontent.com/XWsTwT5xQ-gCTLK3com5CEtSnOQ4nPMTEj57znvnqpEaEo4JW67F-1JwnEgUGtZFt_R0_EI3eok=w640-h400-e365)
 
 ## 感谢
 * 二维码生成服务由 [https://github.com/davidshimjs/qrcodejs/](https://github.com/davidshimjs/qrcodejs/) 提供服务
