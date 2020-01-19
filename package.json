@@ -1,0 +1,22 @@
+{
+  "name": "qcode",
+  "version": "1.0.0",
+  "description": "一个 Chrome 拓展程序，生成基于当前页面的二维码和短网址",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moorper/qcode.git"
+  },
+  "author": "Where",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moorper/qcode/issues"
+  },
+  "homepage": "https://github.com/moorper/qcode#readme",
+  "devDependencies": {
+    "prettier": "1.19.1"
+  }
+}
