@@ -7,7 +7,7 @@ options.forEach(function(item) {
 });
 
 chrome.storage.sync.get("shorter", function(object) {
-  var shorter = object.shorter || 1;
+  var shorter = object.shorter || 3;
   options.forEach(function(item) {
     if (shorter == item.value) {
       item.checked = "checked";
