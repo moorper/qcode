@@ -9,7 +9,7 @@ document.getElementById("short").addEventListener("input", function(event) {
 chrome.tabs.getSelected(null, function(tab) {
   renderQRCode(tab.url);
   chrome.storage.sync.get("shorter", function(object) {
-    var shorter = object.shorter || 1;
+    var shorter = object.shorter || 3;
     switch (shorter) {
       case "1":
         fetchYourls("https://u.nu", tab.url);
@@ -21,7 +21,7 @@ chrome.tabs.getSelected(null, function(tab) {
         fetchTinyURL(tab.url);
         break;
       default:
-        fetchYourls("https://u.nu", tab.url);
+        fetchTinyURL(tab.url);
         break;
     }
   });
