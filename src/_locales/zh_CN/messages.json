@@ -1,0 +1,17 @@
+{
+  "appName": {
+    "message": "QCode 二维码、短链接 生成工具"
+  },
+  "appDescription": {
+    "message": "生成当前页面的二维码、短链接"
+  },
+  "longUrl": {
+    "message": "长链接"
+  },
+  "tinyUrl": {
+    "message": "短链接"
+  },
+  "invalidUrl": {
+    "message": "您输入的域名暂不支持生成短网址，请重新输入"
+  }
+}

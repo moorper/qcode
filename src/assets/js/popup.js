@@ -17,6 +17,9 @@ chrome.tabs.getSelected(null, function(tab) {
       case "2":
         fetchYourls("https://biu.run", tab.url);
         break;
+      case "3":
+        fetchTinyURL(tab.url);
+        break;
       default:
         fetchYourls("https://u.nu", tab.url);
         break;
@@ -29,15 +32,42 @@ function renderQRCode(url) {
   qrcode.makeCode(url);
 }
 
-function fetchYourls(shorter, url) {
-  if (!validateUrl(url)) {
+/**
+ * 基于 yourls 类型的服务商处理
+ * @param shorter yourls 服务提供商
+ * @param longUrl 原始长链接
+ */
+function fetchYourls(shorter, longUrl) {
+  if (!validateUrl(longUrl)) {
     return;
   }
   var xmlHttpRequest = new XMLHttpRequest();
   xmlHttpRequest.addEventListener("load", function() {
     setShorterValue(this.responseText);
   });
-  xmlHttpRequest.open("get", shorter + "/api.php?action=shorturl&format=simple&url=" + url);
+  var url = new URL("api.php", shorter);
+  url.searchParams.append("action", "shorturl");
+  url.searchParams.append("format", "simple");
+  url.searchParams.append("url", longUrl);
+  xmlHttpRequest.open("get", url.toString());
+  xmlHttpRequest.send();
+}
+
+/**
+ * 基于 https://tinyurl.com
+ * @param longUrl 原始长链接
+ */
+function fetchTinyURL(longUrl) {
+  if (!validateUrl(longUrl)) {
+    return;
+  }
+  var xmlHttpRequest = new XMLHttpRequest();
+  xmlHttpRequest.addEventListener("load", function() {
+    setShorterValue(this.responseText);
+  });
+  var url = new URL("api-create.php", "https://tinyurl.com");
+  url.searchParams.append("url", longUrl);
+  xmlHttpRequest.open("get", url.toString());
   xmlHttpRequest.send();
 }
 
@@ -45,7 +75,7 @@ function validateUrl(url) {
   if (url.startsWith("http://") || url.startsWith("https://")) {
     return true;
   } else {
-    setShorterValue("您输入的域名暂不支持生成短网址，请重新输入");
+    setShorterValue(chrome.i18n.getMessage("invalidUrl"));
     return false;
   }
 }

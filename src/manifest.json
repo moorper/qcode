@@ -1,8 +1,9 @@
 {
-  "name": "QCode 二维码、短链接 生成工具",
-  "description": "生成当前页面的二维码、短链接",
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDescription__",
   "version": "1.8.0",
   "manifest_version": 2,
+  "default_locale": "zh_CN",
   "icons": {
     "128": "assets/img/icon-128.png",
     "48": "assets/img/icon-48.png",
