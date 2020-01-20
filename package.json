@@ -1,6 +1,6 @@
 {
   "name": "qcode",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "一个 Chrome 拓展程序，生成基于当前页面的二维码和短网址",
   "private": true,
   "scripts": {
