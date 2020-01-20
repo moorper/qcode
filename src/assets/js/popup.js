@@ -5,7 +5,6 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 document.getElementById("short").addEventListener("input", function(event) {
   renderQRCode(document.getElementById("short").value);
 });
-
 chrome.tabs.getSelected(null, function(tab) {
   renderQRCode(tab.url);
   chrome.storage.sync.get("shorter", function(object) {
