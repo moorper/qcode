@@ -1,7 +1,7 @@
 {
   "name": "__MSG_appName__",
   "description": "__MSG_appDescription__",
-  "version": "1.8.2",
+  "version": "1.8.3",
   "manifest_version": 2,
   "default_locale": "zh_CN",
   "icons": {
@@ -18,5 +18,5 @@
     "default_popup": "popup.html"
   },
   "options_page": "options.html",
-  "permissions": ["https://*/*", "activeTab", "storage"]
+  "permissions": ["activeTab", "storage", "https://u.nu/*", "https://biu.run/*", "https://tinyurl.com/*"]
 }
