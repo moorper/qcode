@@ -7,20 +7,21 @@ document.getElementById("short").addEventListener("input", function(event) {
 });
 
 chrome.tabs.getSelected(null, function(tab) {
-  var short = window.localStorage.getItem("shorter");
-  switch (short) {
-    case "1":
-      fetchYourls("https://u.nu", tab.url);
-      break;
-    case "2":
-      fetchYourls("https://biu.run", tab.url);
-      break;
-    default:
-      fetchYourls("https://u.nu", tab.url);
-      break;
-  }
-
   renderQRCode(tab.url);
+  chrome.storage.sync.get("shorter", function(object) {
+    var shorter = object.shorter || 1;
+    switch (shorter) {
+      case "1":
+        fetchYourls("https://u.nu", tab.url);
+        break;
+      case "2":
+        fetchYourls("https://biu.run", tab.url);
+        break;
+      default:
+        fetchYourls("https://u.nu", tab.url);
+        break;
+    }
+  });
 });
 
 function renderQRCode(url) {
